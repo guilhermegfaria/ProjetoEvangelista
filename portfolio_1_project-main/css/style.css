@@ -1,0 +1,103 @@
+/* Adicionando variáveis de cores e fontes */
+:root {
+    --main-color: #00bcd4;
+    --bg-color-01: #2d3436;
+    --bg-color-02: #323946;
+    --text-color: #fff;
+}
+
+/* Resetando e melhorando a tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color-01);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-color);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--main-color) !important;
+}
+
+/* Section Padding */
+section {
+    padding: 80px 0;
+}
+
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.home-img img, .about-img img {
+    border-radius: 50%;
+    width: 80%;
+    max-width: 350px;
+}
+
+.home-content h1, .about-content h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.services-box {
+    background-color: var(--bg-color-02);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.services-box:hover {
+    transform: translateY(-10px);
+}
+
+.services-box i {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.services-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}   
+
+.btn {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #009faf;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .home, .about {
+        flex-direction: column;
+    }
+}
